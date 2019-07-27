@@ -18,9 +18,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 const uri = "mongodb+srv://" + process.env.CLUSTER_USERNAME + ":" + process.env.CLUSTER_PASSWORD + "@cluster0-vigma.mongodb.net/blogDB";
-// console.log(uri);
-// mongoose.connect("mongodb+srv://" + process.env.CLUSTER_USERNAME + ":" + process.env.CLUSTER_PASSWORD + "@cluster0-vigma.mongodb.net/blogDB", {useNewUrlParser: true});
-// mongoose.connect("mongodb+srv://admin-anh:first123@cluster0-vigma.mongodb.net/blogDB", {useNewUrlParser: true});
 mongoose.connect(uri, {useNewUrlParser: true});
 
 
